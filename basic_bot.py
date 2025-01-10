@@ -55,7 +55,7 @@ async def repeat(ctx, times: int, content='repeating...'):
 @bot.command()
 async def joined(ctx, member: discord.Member):
     """Says when a member joined."""
-    await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
+    await ctx.send(f'{member.name} desgraciadamente se unio {discord.utils.format_dt(member.joined_at)}')
 
 
 @bot.group()
@@ -65,13 +65,13 @@ async def cool(ctx):
     In reality this just checks if a subcommand is being invoked.
     """
     if ctx.invoked_subcommand is None:
-        await ctx.send(f'No, {ctx.subcommand_passed} is not cool')
+        await ctx.send(f'No, {ctx.subcommand_passed} no esta bien')
 
 
 @cool.command(name='bot')
 async def _bot(ctx):
     """Is the bot cool?"""
-    await ctx.send('Yes, the bot is cool.')
+    await ctx.send('no, XD')
 
 
-bot.run('MTMyNDU0ODE0MzUwMDc1OTA1MQ.GPlTHg.b3PIqcHbSlIt6o0kuehawy9wTJE_x3CpWHK34s')
+bot.run('token')
